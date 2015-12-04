@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular with Tom</title>
+</head>
+<body ng-app="ConcertAttendees">
+    <div ng-controller="MainController">
+        <h1>Who wants to go to this concert?</h1>
+        <ul>
+            <li ng-repeat="attendee in attendees">{{ attendee }}</li>
+        </ul>
+        <div ng-controller="FormController">
+            <form>
+                <input type="text" ng-model="attendeeName" />
+                <button ng-click="submitAttendee()">I can make it!</button>
+            </form>
+        </div>
+    </div>
+    <script src="angular/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="MainController.js"></script>
+    <script src="FormController.js"></script>
+    <script src="AttendeesFactory.js"></script>
+</body>
+</html>
